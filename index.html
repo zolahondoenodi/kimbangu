@@ -1,0 +1,123 @@
+<!Doctype html>
+<html lang="fr-en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservation</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="stylesheet" href="accueil.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="icon.png" alt="logo" width="30">
+                <p>Reservation</p>
+            </div>
+            <nav id="menu">
+                <a href=""><i class="fa-solid fa-phone"></i> Contact</a>
+                <a href=""><i class="fa-solid fa-calendar-check"></i> Nos reservations</a>
+                <a href=""><i class="fa-solid fa-circle-question"></i> Aide</a>
+                <a href=""><i class="fa-solid fa-user"></i> profil</a>
+                <a href=""><i class="fa-solid fa-message"></i> Messagerie</a>
+                <a href=""><i class="fa-solid fa-gear"></i> Paremetre</a>
+            </nav>
+            <div class="burger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+        </header>
+
+        <section class="hero">
+            <h1>Bienvenue A Notre Page </h1>
+            <p>Réservation des vos candidatures à notre organisation en cliquant simplement et rapidement</p>
+            <button onclick=""><i class="fa-solid fa-calendar-check"></i></button>
+        </section>
+        
+        <main id="reservation">
+            <div class="card">
+                <h2>Deposer Votre candidature ici <i class="fa-solid fa-calendar"></i></h2>
+                <form action="" id="formResa" method="">
+                    <div class="grid">
+                        <div class="input-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="nom" id="name" placeholder="Votre nom complet" required>
+                        </div>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="gmail" name="" placeholder="Exemple@gmail.com" required>
+                        </div>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="phone" name="" id="telephone" placeholder="+243 XXX XXX XXX" required>
+                        </div>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-message"></i>
+                            <input type="phone" name="" id="message" placeholder="Ecrit un fa-message" required>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button onclick="save()">Vérifier les disponibilités</button>
+                        <button onclick="annuler()">Annulation</button>
+                    </div>                
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div></div>
+            <div>
+                <p>2026 Réserver vos places et faite vos candidacture sur notre Page
+                    <b>
+                        Politique de confidentialité | Mentions legales | Contact
+                    </b>
+                </p>
+            </div>
+            <div class="accueiller">
+                <nav>
+                 <a href=""><i class="fa-solid fa-house"></i></a>   
+                <a href=""><i class="fa-solid fa-phone"></i></a>
+                <a href=""><i class="fa-solid fa-calendar-check"></i></a>
+                <a href=""><i class="fa-solid fa-circle-question"></i></a>
+                <a href=""><i class="fa-solid fa-message"></i></a>
+                <a href=""><i class="fa-solid fa-gear"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </nav>
+            </div>
+        </footer>
+        <script>
+            function save() {
+                let nom =document.getElementById('name');
+                let gmail =document.getElementById('gmail');
+                let phone =document.getElementById('telephone');
+                let message =document.getElementById('message');
+
+                if (nomm == "" || gmail == "" || phone == "" || message == "") {
+                    alert('Veiller remplire les champs');
+                    return;
+                }
+
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(gmail)) {
+                    alert('Adresse Gmail Invalide');
+                    return;
+                }
+
+                let phoneRegex = /^\+243\d{9}$/;
+                
+                if (!phoneRegex.test(phono)) {
+                    alert('Numero téléphone Invalide');
+                    return;
+                }
+
+                alert("Formulaire envoyé avec succès !");
+            }
+
+            function annuler() {
+                document.getElementById('nom').value ="";
+                document.getElementById("gmail").value ="";
+                document.getElementById("phone").value ="";
+                document.getElementById('message').value ="";
+
+                alert("Formulaire annuler");
+            }
+        </script>
+    </body>
+</html>

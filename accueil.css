@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: whitesmoke;
+}
+
+header {
+    background: #84d0f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+}
+header h1 {
+    font-weight: bolder;
+    color: black;
+}
+
+.logo {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+header nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.btn-top, .btn-green, .btn-big {
+    background-color: #0a9b4d;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    background: transparent;
+    text-align: center;
+    padding: 40px 15px 70px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    color:  black;
+}
+
+.hero p {
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+.hero button {
+    cursor: pointer;
+    width: 10%;
+    padding: 5px;
+    background: #0299df;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.hero button:hover {
+    background: #272727;
+    color: whitesmoke;
+}
+.card {
+    background: rgb(192, 221, 235);
+    max-width: 900px;
+    margin: -35px auto 20px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(67, 192, 223, 0.1);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #0299df;
+}
+.input-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0c0c0c;
+    border-radius: 8px;
+    background: white;
+    padding: 0 8px;
+    margin-bottom: 15px;
+}
+
+.input-icon i {
+    color:#0299df;
+    font-size: 16px;
+    margin-right: 8px;
+}
+.input-icon input {
+    border: none !important;
+    outline: none !important;
+    padding: 8px 0;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 12px;
+    color: rgb(104, 95, 95);
+}
+.grid {
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+footer {
+    text-align: center;
+}
+footer p {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 55px;
+}
+.accueiller {
+    background: black;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-size: 10px;
+    position: sticky;
+    top: 0;
+}
+footer  nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 12px;
+    padding: 20px 30px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    color: #0299df;
+    cursor: pointer;
+}
+.btn button {
+    width: 25%;
+    font-size: 12px;
+    padding: 10px;
+    gap: 20px;
+    cursor: pointer;
+    background: #0c0c0c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn button:hover {
+    background: #0299df;
+}
